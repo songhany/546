@@ -1,0 +1,12 @@
+{
+  "name": "cs-546-lab-2",
+  "version": "1.0.0",
+  "description": "This is lab2 of Songhan Yu. Come on!",
+  "main": "index.js",
+  "scripts": {
+    "test": "node lab2.test.js",
+    "start": "node index.js"
+  },
+  "author": "Songhan Yu 10470449",
+  "license": "MIT"
+}

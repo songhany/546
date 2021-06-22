@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #e9e6e6;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15pt;
+}
+
+main {
+  max-width: 75%;
+  margin: auto;
+}
+
+
+button:hover {
+  color:rgb(245, 48, 64);
+  background-color: #e9e6e6;
+}
+
+p.error {
+  color:rgb(245, 48, 64);
+}

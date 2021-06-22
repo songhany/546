@@ -1,0 +1,12 @@
+<section>
+
+  <h1>Posts</h1>
+
+  {{#each posts}}  <!-- for each post in postList that were passed in -->
+    <article class="post">  
+      <h2><a href="/posts/{{_id}}">{{title}}</a></h2>  <!-- when click this link, people jump to link -->
+      <p>{{body}}</p>
+    </article>
+  {{/each}}
+
+</section>

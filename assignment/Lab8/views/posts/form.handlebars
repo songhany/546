@@ -1,0 +1,14 @@
+<main>
+  <h1>Input search term</h1>
+  <p>This website is built for TV Maze API. You can search matching show by keywords that you want to find, or input a specific show id to find that show.</p>
+
+  <form method="POST" action="/search" class="search-form">
+
+    <label>
+      searchTerm
+      <input type="text" name="searchTerm" placeholder="search term" value="{{post.body}}">  <!-- {{post.body}} is for storing data without disappearing when people refresh page -->
+    </label>
+    <button type="submit">Submit search term</button>
+  </form>
+
+</main>

@@ -1,0 +1,66 @@
+<article class="new-post">
+
+  <h1>Make a Post</h1>
+
+  <form action="/posts" method="POST" class="new-post-form">
+    <label>
+      Post Title
+      <input type="text" name="title" placeholder="Post Title" value="{{post.title}}" class="full-width-input"/>  <!-- value="{{post.title}}" is for storing data that people type in without disappearing when refresh page -->
+    </label>
+
+    <label>
+      What number professor am I?
+      <input type="number" name="professor_ranking" placeholder="#1 professor in North America" class="full-width-input"/>
+    </label>
+
+    <label for="post-body">
+      Post Body
+    </label>
+    <textarea id="post-body" name="body" rows="4" placeholder="Post Content" class="full-width-input">{{post.body}}</textarea>  <!-- {{post.body}} is for storing data without disappearing when people refresh page -->
+
+
+    <label for="poster">
+      Poster
+    </label>
+    <select class="full-width-input" name="posterId">  <!-- pass in a list of user that they get all users function returns, then we pass into template below -->
+      <option value="">Select User...</option>
+      {{#each users}}  <!-- for each user -->
+        <option value="{{_id}}">{{firstName}} {{lastName}}</option>  <!-- value of {{_id}} is users ID, where here display is their firstName and lastName -->
+      {{/each}}
+    </select>
+
+    <label>
+      <input type="radio" name="user-test" value="1" /> One
+    </label>
+    <label>
+      <input type="radio" name="user-test" value="2" /> Two
+    </label>
+
+    <div>
+      <label>
+      <input type="checkbox" name="checkbox-test" value="first" /> First
+      </label>
+    </div>
+    
+    <div>
+      <label>
+      <input type="checkbox" name="checkbox-test" value="second" /> Second
+      </label>
+    </div>
+    
+    <button type="submit">Create New Post</button>
+    <button type="reset">Clear Form</button>
+    <button type="button">Click me!</button>
+  </form>
+
+  {{#if hasErrors}}  <!-- if hasErrors = true. keep tracks of errors by pushing it to an array, like 'titile is missing' -->
+  <ul class="error-list">
+    {{#each errors}}
+    <li>
+      {{this}}
+    </li>
+    {{/each}}
+  </ul>
+  {{/if}}
+
+</article>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/css/main.css">
+  </head>
+  
+
+  <body>
+    <header>
+      <h1>TV Maze Search</h1>
+    </header>
+
+    <form id="searchForm">
+      <label for="search_term">
+        Search Term
+        <input type="text" id="search_term">
+      </label>
+      <button type="submit">search</button>
+    </form>
+
+    <div id="error" class="error" hidden></div>  <!-- if there is error, show this error message-->
+
+    <ul id="showList" hidden></ul>
+    <div id="show" hidden></div>
+
+    <a id="homeLink" href="/" hidden> Back to All Shows </a>
+
+    
+    <footer>
+      <p>Songhan Yu</p>
+      <p>CWID: 10470449</p>
+      <p>lab11</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="/public/js/script.js" async defer></script>
+  </body>
+</html>

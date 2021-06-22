@@ -1,0 +1,21 @@
+<main>
+<form id="server-form" class="server-form" method="POST">
+  <div class="form-body">
+    <label for="index_input">
+      Input index of Fibonacci
+      <input type="number" id="index_input" name="index" placeholder="Index">  <!-- {{post.body}} is for storing data without disappearing when people refresh page -->
+    </label>
+    <button type="submit">Submit Index</button>
+  </div>
+</form>
+
+
+<ul id="results"> </ul>  <!-- add result here -->
+
+
+<div id="error-container" class="error-container hidden">
+  <div class="alert text-goes-here">
+  </div>
+</div>
+
+</main>

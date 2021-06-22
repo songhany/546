@@ -1,0 +1,18 @@
+<article class="post">
+
+  <h1>{{ post.title }}</h1>   <!-- pass in here is a 'single post', so useing {{post.title}} here -->
+  <address>Posted by {{post.poster.name}}</address>
+  <p>{{ post.body }}</p>   <!--  {{post.body}} -->
+
+  {{#if post.tags.length}}  <!-- because tags are optional, we check whether a tag exits -->
+    <h3>Tags</h3>
+    <ul>
+      {{#each post.tags}}  <!-- tags exits, so for each tags ❤注意this的用法-->
+        <li><a href="/posts/tag/{{this}}">{{this}}</a></li>
+      {{/each}}
+    </ul>
+  {{/if}}
+
+  <a href="/posts">Back to All Posts</a>  <!-- a link that can go back to /posts -->
+
+</article>

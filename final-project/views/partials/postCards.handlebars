@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="/public/css/dashboard.css" />
+
+<!-- if use "#each results", we should put postCards.handlebars entirely into /views/dashboard/dashboard.handlebars, instead of putting it into partials. In this way, we maybe need refresh page -->
+<div class="post-cards"><br />
+  <img
+    src="https://www.w3schools.com/w3images/avatar2.png"
+    alt="Avatar"
+    class="avatar-image"
+    style="width:60px"
+  />
+  {{#if resolvedStatus}}
+    <h4>[Resolved] {{title}}</h4>
+  {{else}}
+    <h4>[Unresolved] {{title}}</h4>
+  {{/if}}
+  <span>Posted on {{formattedDate postTime}} by {{userName}}</span><br />
+
+  <hr />
+  <div class="card-content">
+    <p>{{postContent}}</p>
+    <div class="chip-container">
+      {{#each tags}}
+        <div class="chip">
+          {{this}}
+        </div>
+      {{/each}}
+
+    </div>
+  </div>
+  <hr />
+  <div class="card-actions">
+
+    <form class="card-ations-form like-form" action="">
+      {{#if isLiked}}
+      <button type="submit" class="card-actions-button"><span class="fa fa-thumbs-up" id="like"></span>
+        <span>{{likeCount}}</span></button>
+      {{else}}
+      <button type="submit" class="card-actions-button"><span class="fa fa-thumbs-up" id="not-like"></span>
+       <span>{{likeCount}}</span></button>
+      {{/if}}
+
+      <input type="hidden" id="post_id" name="post_id" value="{{_id}}" />
+
+    </form>
+
+    <form class="card-ations-form" action="/posts/{{_id}}">
+      <button type="submit" class="card-actions-button"><i
+          class="fa fa-comment"
+        ></i>
+        Comment</button>
+    </form>
+
+    {{#ifEquals userId sessionUserId}}
+
+      <form class="card-ations-form" action="/posts/edit/{{_id}}">
+        <button type="submit" class="card-actions-button"><i
+            class="fa fa-edit"
+          ></i>
+          Edit</button>
+      </form>
+      <form
+        class="card-ations-form"
+        method="POST"
+        action="/posts/delete/{{_id}}"
+      >
+        <button type="submit" class="card-actions-button"><i
+            class="fa fa-trash"
+          ></i>
+          Delete</button>
+      </form>
+    {{/ifEquals}}
+  </div>
+</div>

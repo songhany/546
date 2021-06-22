@@ -1,0 +1,13 @@
+{
+  "name": "lecture_03",
+  "version": "1.0.0",
+  "description": "This is asynchronous module",
+  "main": "callback.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Songhan Yu",
+  "license": "MIT",
+  "dependencies": {
+  }
+}

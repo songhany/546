@@ -1,0 +1,18 @@
+{
+  "name": "lab8",
+  "version": "1.0.0",
+  "description": "Songhan Yu's Lab8",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Songhan Yu 10470449",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "handlebars": "^4.7.3"
+  }
+}
