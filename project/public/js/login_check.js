@@ -1,7 +1,6 @@
 (function($) {
 
     let loginForm = $('#login-form');
-    
 
     loginForm.submit(function(event){
 

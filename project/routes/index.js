@@ -12,6 +12,7 @@ const constructorMethod = (app) => {
   app.use("/comments", commentRoutes);
   app.use("/posts", postRoutes);
   app.use("/auth", authRoutes);
+  
   app.get("/logout", async (req, res) => {
     // trigger /logout router to logout
     res.clearCookie("AuthCookie");

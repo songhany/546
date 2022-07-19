@@ -3,8 +3,6 @@
    
     let likeForm = $('.like-form');
 
-
-  
     likeForm.submit(function(event){
 
         event.preventDefault(); 
@@ -19,12 +17,12 @@
         if(curId === 'like'){
           // decrease case
           theSpans[0].id = 'not-like';
-          let plural = likeCount-1 > 1 ? 'Likes' : 'Like';
-          theSpans[1].innerText = `${likeCount-1} ${plural}`;
+          let plural = likeCount - 1 > 1 ? 'Likes' : 'Like';
+          theSpans[1].innerText = `${likeCount - 1} ${plural}`;
         }else{
           theSpans[0].id = 'like';
-          let plural = likeCount+1 > 1 ? 'Likes' : 'Like';
-          theSpans[1].innerText = `${likeCount+1} ${plural}`;
+          let plural = likeCount + 1 > 1 ? 'Likes' : 'Like';
+          theSpans[1].innerText = `${likeCount + 1} ${plural}`;
         }
 
         // items for db query

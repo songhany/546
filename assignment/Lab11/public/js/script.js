@@ -50,8 +50,8 @@ $(() => {
       $('#error').show();
     }
   });
-      
-  
+
+
   // Link Clicked:  For the link, you will need to call a function on the click event of the link
   $(document).on('click', '.singleShow', function(event) {
     event.preventDefault();  // prevent default link behavior
@@ -135,5 +135,6 @@ $(() => {
 
     });
   });
+
 });
 

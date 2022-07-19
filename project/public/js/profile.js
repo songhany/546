@@ -2,8 +2,6 @@
 
     let likeForm = $('.like-form');
 
-
-  
     likeForm.submit(function(event){
 
         event.preventDefault(); 

@@ -2,7 +2,6 @@
 
     let registerForm = $('#register-form');
     
-    
     registerForm.submit(function(event){
 
         let userName = $('#userName');
